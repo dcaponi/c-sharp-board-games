@@ -42,8 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\Game.cs" />
+    <Compile Include="Abstractions\Move.cs" />
+    <Compile Include="Abstractions\User.cs" />
+    <Compile Include="Factories\GameBoardFactory.cs" />
+    <Compile Include="Factories\GameFactory.cs" />
+    <Compile Include="Interfaces\IBoard.cs" />
+    <Compile Include="Interfaces\IPlayable.cs" />
+    <Compile Include="PlayStrategies\GuessText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WheelOfFortune\WoFBoard.cs" />
+    <Compile Include="WheelOfFortune\WoFGame.cs" />
+    <Compile Include="WheelOfFortune\WoFMove.cs" />
+    <Compile Include="WheelOfFortune\WoFPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
