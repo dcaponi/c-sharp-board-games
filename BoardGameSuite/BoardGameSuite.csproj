@@ -47,18 +47,21 @@
     <Compile Include="Abstractions\User.cs" />
     <Compile Include="Factories\GameBoardFactory.cs" />
     <Compile Include="Factories\GameFactory.cs" />
+    <Compile Include="Games\ConnectFour\ConnectFourBoard.cs" />
+    <Compile Include="Games\ConnectFour\ConnectFourGame.cs" />
+    <Compile Include="Games\WheelOfFortune\WoFBoard.cs" />
+    <Compile Include="Games\WheelOfFortune\WoFGame.cs" />
+    <Compile Include="Games\WheelOfFortune\WoFMove.cs" />
+    <Compile Include="Games\WheelOfFortune\WoFPlayer.cs" />
     <Compile Include="Interfaces\IBoard.cs" />
     <Compile Include="Interfaces\IPlayable.cs" />
     <Compile Include="PlayStrategies\GuessText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WheelOfFortune\WoFBoard.cs" />
-    <Compile Include="WheelOfFortune\WoFGame.cs" />
-    <Compile Include="WheelOfFortune\WoFMove.cs" />
-    <Compile Include="WheelOfFortune\WoFPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

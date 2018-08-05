@@ -13,6 +13,10 @@ namespace BoardGameSuite
             {
                 return new WoFGame();
             }
+            if (option == 2)
+            {
+                return new ConnectFourGame();
+            }
             return null;
         }
     }
