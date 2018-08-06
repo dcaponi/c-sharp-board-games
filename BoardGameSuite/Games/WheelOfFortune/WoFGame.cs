@@ -7,40 +7,17 @@ namespace BoardGameSuite
     class WoFGame : Game
     {
         private WoFBoard board;
-
-        public WoFGame()
+        public WoFGame() : base( "wof", 3 )
         {
             Console.WriteLine("Wheel... Of... FORTUNE!!!");
-            gameName = "wof";
-            maxPlayers = 3;
-            createUsers(maxPlayers);
-            startGame();
         }
 
-        protected override void startGame()
+        protected override void createBoard( string gameName )
         {
-            board = (WoFBoard) gameBoardFactory.CreateGameBoard(gameName);
-            while ( !gameOver )
-            {
-                User currentUser = userList.Dequeue();
-                facilitatePlayerGuessOnBoard( currentUser );
-                userList.Enqueue( currentUser );
-                if( gameOver )
-                {
-                    Console.WriteLine("Congratulations " + currentUser.name + " You Win!!!!");
-                    Console.WriteLine("Play again? y/n");
-                    string restart = Console.ReadLine().ToLower();
-                    if( restart[0] == 'y' )
-                    {
-                        board = (WoFBoard) gameBoardFactory.CreateGameBoard(gameName);
-                        gameOver = false;
-                    }
-                }
-            }
-            
+            board = (WoFBoard)gameBoardFactory.CreateGameBoard(gameName);
         }
 
-        private void facilitatePlayerGuessOnBoard( User currentUser )
+        protected override void facilitatePlayerGuessOnBoard( User currentUser )
         {
             do {
                 Move currentPlay = currentUser.Play();
